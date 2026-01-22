@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/Status-Development-blue.svg" /></a>
-  <a href="#"><img src="https://img.shields.io/badge/Licence-Unspecified-lightgrey.svg" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/Status-Completed-blue.svg" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/Licence-MIT-lightgreen.svg" /></a>
 </p>
 
 ---
