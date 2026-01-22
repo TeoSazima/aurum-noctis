@@ -1,0 +1,199 @@
+/* ========================================================== */
+/*                      HERO SEKCE                            */
+/* ========================================================== */
+
+.home-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    url("images/hero/reservation-hero.png") center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    max-height: 160px;
+}
+
+.home-hero h1 {
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 58px;
+    color: goldenrod;
+    margin-bottom: 12px;
+}
+
+.home-hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #eee;
+    line-height: 1.6;
+}
+
+
+/* ========================================================== */
+/*                    SEKCE REZERVACE                         */
+/* ========================================================== */
+
+/* --- Hlavní kontejner sekce --- */
+.reservation-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 70px;
+    padding: 60px 80px;
+    background-color: #fffdf8;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+
+/* ========================================================== */
+/*              LEVÁ ČÁST - OBRÁZEK S DEKORACÍ                */
+/* ========================================================== */
+
+/* --- Wrapper pro obrázek a dekoraci --- */
+.reservation-image-wrapper {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Kontejner obrázku --- */
+.reservation-image {
+    display: flex;
+    justify-content: center;
+}
+
+.reservation-image img {
+    width: 55vw;
+    max-width: 900px;
+    height: auto;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* --- Hover efekt --- */
+.reservation-image img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* --- Dekorace vlnovka pod obrázkem --- */
+.vlnka-pod-obrazkem {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.vlnka-pod-obrazkem img {
+    width: 90%;
+    max-width: 700px;
+    height: auto;
+    opacity: 0.9;
+}
+
+
+/* ========================================================== */
+/*                 PRAVÁ ČÁST - FORMULÁŘ                      */
+/* ========================================================== */
+
+/* --- Kontejner formuláře --- */
+.reservation-container {
+    flex: 0.8;
+    background-color: #ffffff;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 420px;
+}
+
+/* --- Nadpis formuláře --- */
+.reservation-container h1 {
+    text-align: center;
+    color: #d4a017;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+/* --- Styl vstupů --- */
+.reservation-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.reservation-form textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* --- Tlačítko odeslání --- */
+.reservation-form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #d4a017;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.reservation-form button:hover {
+    background-color: #b98b13;
+}
+
+
+/* ========================================================== */
+/*                         RESPONSIVITA                       */
+/* ========================================================== */
+
+/* --- Tablety a menší zařízení (do 1000px) --- */
+@media (max-width: 1000px) {
+    .reservation-section {
+        flex-direction: column;
+        gap: 50px;
+        padding: 40px;
+    }
+
+    .reservation-image img {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .reservation-container {
+        max-width: 90%;
+    }
+}
+
+/* --- Mobilní telefony (do 900px) --- */
+@media (max-width: 900px) {
+    .home-hero {
+        height: 40vh;
+        min-height: 280px;
+    }
+
+    .home-hero h1 {
+        font-size: 38px;
+    }
+
+    .home-hero p {
+        font-size: 16px;
+    }
+}

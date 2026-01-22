@@ -1,0 +1,325 @@
+/* ========================================================== */
+/*                   ZÁKLADNÍ STYLY STRÁNKY                   */
+/* ========================================================== */
+
+body {
+    background: #fffdf8;
+    color: #333;
+    font-family: "Georgia", serif;
+    margin: 0;
+}
+
+
+/* ========================================================== */
+/*                      HERO SEKCE                            */
+/* ========================================================== */
+
+.menu-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    url("images/hero/menu-hero.png") center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    max-height: 160px;
+}
+
+.menu-hero h1 {
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 58px;
+    color: goldenrod;
+    margin-bottom: 12px;
+}
+
+.menu-hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #eee;
+    line-height: 1.6;
+}
+
+
+/* ========================================================== */
+/*                    SEKCE MENU KATEGORIÍ                    */
+/* ========================================================== */
+
+/* --- Základní styl sekcí --- */
+.menu-section {
+    padding: 80px 60px;
+    text-align: center;
+    background: #fffdf8;
+}
+
+.menu-section.alt-bg {
+    background: #fdf9f1;
+}
+
+.menu-section h2 {
+    font-size: 36px;
+    color: goldenrod;
+    font-family: 'Lucida Handwriting', cursive;
+    margin-bottom: 40px;
+}
+
+
+/* ========================================================== */
+/*                      GRID MENU POLOŽEK                     */
+/* ========================================================== */
+
+.menu-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ========================================================== */
+/*                   JEDNOTLIVÉ MENU POLOŽKY                  */
+/* ========================================================== */
+
+/* --- Základní karta položky --- */
+.menu-item {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 340px;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+}
+
+/* --- Obrázky jídel --- */
+.menu-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* --- Textové informace --- */
+.menu-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.menu-info h3 {
+    color: goldenrod;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.menu-info p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.menu-info .price {
+    font-weight: bold;
+    color: #222;
+    float: right;
+}
+
+
+/* ========================================================== */
+/*                  SEKCE NÁPOJŮ (bez obrázků)               */
+/* ========================================================== */
+
+.menu-grid.drinks .menu-item {
+    width: 300px;
+    background: #fff9ed;
+    padding: 30px;
+    text-align: left;
+}
+
+.menu-grid.drinks .menu-item h3 {
+    font-size: 20px;
+    color: goldenrod;
+    margin-bottom: 8px;
+}
+
+.menu-grid.drinks .menu-item p {
+    color: #444;
+    margin: 4px 0;
+}
+
+.menu-grid.drinks .menu-item .price {
+    float: none;
+    color: #222;
+    font-weight: 600;
+}
+
+
+/* ========================================================== */
+/*                         RESPONSIVITA                       */
+/* ========================================================== */
+
+/* --- Tablety a menší zařízení (do 900px) --- */
+@media (max-width: 900px) {
+    .menu-section { padding: 60px 30px; }
+    .menu-grid { gap: 24px; }
+    .menu-item { width: 90%; }
+}
+
+/* --- Mobilní telefony (do 600px) --- */
+@media (max-width: 600px) {
+    .menu-hero h1 { font-size: 40px; }
+    .menu-hero p { font-size: 16px; }
+}
+
+
+/* ========================================================== */
+/*                      STYLY PRO TISK                        */
+/* ========================================================== */
+
+@media print {
+
+    /* --- Skrytí navigace a patičky --- */
+    #hlavni-menu,
+    #footer {
+        display: none !important;
+    }
+
+    /* --- Reset pozadí a barev pro tisk --- */
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+
+    /* --- Hero sekce - zjednodušená verze --- */
+    .menu-hero {
+        background: none;
+        color: black;
+        padding: 20px 0;
+        max-height: none;
+        page-break-after: avoid;
+    }
+
+    .menu-hero h1 {
+        color: black;
+        font-size: 32pt;
+        margin-bottom: 10px;
+    }
+
+    .menu-hero p {
+        color: black;
+        font-size: 11pt;
+    }
+
+    /* --- Sekce menu --- */
+    .menu-section {
+        padding: 20px 0;
+        background: white !important;
+        page-break-inside: avoid;
+    }
+
+    .menu-section h2 {
+        color: black;
+        font-size: 18pt;
+        margin-bottom: 15px;
+        border-bottom: 2px solid black;
+        padding-bottom: 5px;
+    }
+
+    /* --- Grid pro tisk - jednoduchý seznam --- */
+    .menu-grid {
+        display: block;
+        gap: 0;
+    }
+
+    /* --- Menu položky pro tisk --- */
+    .menu-item {
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 0;
+        box-shadow: none;
+        width: 100%;
+        margin-bottom: 15px;
+        page-break-inside: avoid;
+        display: block;
+        overflow: visible;
+    }
+
+    .menu-item:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    /* --- Obrázky - skryté pro úsporu toneru --- */
+    .menu-item img {
+        display: none;
+        /* Alternativně: max-height: 100px; pokud chceš malé obrázky */
+    }
+
+    /* --- Info o jídle pro tisk --- */
+    .menu-info {
+        padding: 10px;
+    }
+
+    .menu-info h3 {
+        color: black;
+        font-size: 14pt;
+        margin-bottom: 5px;
+    }
+
+    .menu-info p {
+        color: black;
+        font-size: 10pt;
+        margin-bottom: 5px;
+    }
+
+    .menu-info .price {
+        float: right;
+        color: black;
+        font-weight: bold;
+        font-size: 12pt;
+    }
+
+    /* --- Nápoje sekce pro tisk --- */
+    .menu-grid.drinks .menu-item {
+        width: 100%;
+        background: white;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .menu-grid.drinks .menu-item h3 {
+        color: black;
+        font-size: 13pt;
+    }
+
+    .menu-grid.drinks .menu-item p {
+        color: black;
+        font-size: 10pt;
+    }
+
+    .menu-grid.drinks .menu-item .price {
+        color: black;
+        font-size: 11pt;
+    }
+
+    /* --- Kontrola stránkování --- */
+    h2 {
+        page-break-after: avoid;
+    }
+
+    .menu-item {
+        page-break-inside: avoid;
+    }
+
+    /* --- Zobrazení URL u odkazů --- */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        color: #666;
+    }
+}

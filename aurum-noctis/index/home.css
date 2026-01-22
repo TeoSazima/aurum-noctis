@@ -1,0 +1,152 @@
+/* ========================================================== */
+/*                   ZÁKLADNÍ STYLY STRÁNKY                   */
+/* ========================================================== */
+
+body {
+    background: #fffdf8;
+    color: #333;
+    font-family: "Georgia", serif;
+    margin: 0;
+}
+
+
+/* ========================================================== */
+/*                      HERO SEKCE                            */
+/* ========================================================== */
+
+.home-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    url("images/hero/index-hero.png") center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    max-height: 160px;
+}
+
+.home-hero h1 {
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 58px;
+    color: goldenrod;
+    margin-bottom: 12px;
+}
+
+.home-hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #eee;
+    line-height: 1.6;
+}
+
+
+/* ========================================================== */
+/*              HLAVNÍ SEKCE DOMOVSKÉ STRÁNKY                 */
+/* ========================================================== */
+
+/* --- Kontejner sekce --- */
+#section1-home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 80px 80px;
+    background-color: #fffdf8;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+/* --- Obrázek restaurace --- */
+#section1-home img[alt="indoor-restaurant"] {
+    border-radius: 30px;
+    width: 55%;
+    max-width: 900px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#section1-home img[alt="indoor-restaurant"]:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ========================================================== */
+/*                      TEXTOVÝ BLOK                          */
+/* ========================================================== */
+
+/* --- Hlavní kontejner textu --- */
+.text-block {
+    max-width: 550px;
+    text-align: left;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* --- Nadpis --- */
+.text-block h1 {
+    color: goldenrod;
+    font-family: 'Lucida Handwriting', 'Brush Script MT', cursive;
+    font-size: 32px;
+    margin-bottom: 15px;
+    white-space: normal;
+}
+
+/* --- Odstavec --- */
+.text-block p {
+    font-family: "Modern No. 20", serif;
+    font-size: 20px;
+    color: #555;
+    text-align: justify;
+}
+
+
+/* ========================================================== */
+/*                   DEKORATIVNÍ PRVKY                        */
+/* ========================================================== */
+
+/* --- Vlnka pod textem --- */
+.vlnka-pod-textem img[alt="dekorace-vlnovka"] {
+    display: block;
+    margin: 20px auto 0;
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    opacity: 0.9;
+}
+
+
+/* ========================================================== */
+/*                         RESPONSIVITA                       */
+/* ========================================================== */
+
+/* --- Tablety a menší zařízení (do 1200px) --- */
+@media (max-width: 1200px) {
+    #section1-home {
+        flex-direction: column;
+        padding: 40px 40px;
+        gap: 40px;
+    }
+
+    #section1-home img[alt="indoor-restaurant"] {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .text-block {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .text-block p {
+        text-align: justify;
+    }
+}
+
+/* --- Mobilní telefony (do 600px) --- */
+@media (max-width: 600px) {
+    .home-hero h1 { font-size: 42px; }
+    .home-hero p { font-size: 16px; }
+}

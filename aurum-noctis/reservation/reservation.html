@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="reservation.css">
+    <link rel="stylesheet" href="../.css-global/main-menu.css">
+    <link rel="stylesheet" href="../.css-global/footer.css">
+
+    <title>Table Reservation</title>
+</head>
+<body>
+
+<!-- Hlavní navigace -->
+<nav id="hlavni-menu">
+    <img src="../.images-global/logo-5star.png" alt="logo"/>
+    <ul class="menu">
+        <li><a href="../index/index.html">HOME</a></li>
+        <li><a href="../menu/menu.html">MENU</a></li>
+        <li><a href="reservation.html" class="active">RESERVATION</a></li>
+        <li><a href="../about-us/about-us.html">ABOUT US</a></li>
+        <li><a href="../contacts/contacts.html">CONTACTS</a></li>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="home-hero">
+    <h1>Reservation</h1>
+    <p>Experience exclusive dining – reserve your table today.</p>
+</header>
+
+
+<!-- Sekce s obrázkem a formulářem -->
+<section class="reservation-section">
+    <!-- Levá část – obrázek s dekorací -->
+    <div class="reservation-image-wrapper">
+        <div class="reservation-image">
+            <img src="images/reserved/reserved.png" alt="Reservation image">
+        </div>
+        <!-- Dekorace vlnovka pod obrázkem -->
+        <div class="vlnka-pod-obrazkem">
+            <img src="../.images-global/vlnovka-gold1.png" alt="dekorace-vlnovka">
+        </div>
+    </div>
+
+    <!-- Pravá část – formulář -->
+    <div class="reservation-container">
+        <h1>Table reservation</h1>
+        <form class="reservation-form">
+            <label for="name">Name and Surname:</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+            <label for="phone">Telephone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+420 123 456 789" required>
+
+            <label for="people">People:</label>
+            <select id="people" name="people" required>
+                <option value="">Select...</option>
+                <option value="1">1 person</option>
+                <option value="2">2 people</option>
+                <option value="3">3 people</option>
+                <option value="4">4 people</option>
+                <option value="5">5+ people</option>
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="comment">Special comment:</label>
+            <textarea id="comment" name="comment" placeholder="Gluten-free diet, Birthday party, Wedding..."></textarea>
+
+            <button type="submit">Book a reservation</button>
+        </form>
+    </div>
+</section>
+
+</body>
+
+<footer id="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <h2>AURUM NOCTIS</h2>
+            <p>Fine Dining & Exclusive Experiences</p>
+            <p class="stars">★★★★★</p>
+        </div>
+
+        <div class="footer-center">
+            <h3>Opening Hours</h3>
+            <p>Mon – Fri: 17:00 – 23:00</p>
+            <p>Sat – Sun: 16:00 – 00:00</p>
+        </div>
+
+        <div class="footer-right">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:info@aurumnoctis.com">info@aurumnoctis.com</a></p>
+            <p>Phone: <a href="tel:+420123456789">+420 123 456 789</a></p>
+            <p>Address: Golden Street 7, Paris</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Aurum Noctis | Designed with ✨ by Mateo Sazima</p>
+    </div>
+</footer>
+
+
+</html>

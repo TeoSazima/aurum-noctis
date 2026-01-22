@@ -1,0 +1,161 @@
+/* ========================================================== */
+/*                      HERO SEKCE                            */
+/* ========================================================== */
+
+.menu-hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)),
+    url("images/hero/contacts-hero.png") center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.menu-hero h1 {
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 58px;
+    color: goldenrod;
+    margin-bottom: 12px;
+}
+
+.menu-hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #eee;
+    line-height: 1.6;
+}
+
+
+/* ========================================================== */
+/*                   KONTAKTNÍ INFORMACE                      */
+/* ========================================================== */
+
+/* --- Hlavní kontejner sekce --- */
+#contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 80px 40px;
+    background-color: #fffdf8;
+    text-align: center;
+}
+
+/* --- Jednotlivé informační bloky --- */
+.info-block {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0;
+    width: 300px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.info-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+/* ========================================================== */
+/*                   OBRÁZKY V INFO BLOCÍCH                   */
+/* ========================================================== */
+
+/* --- Kontejner obrázku --- */
+.info-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+/* --- Samotný obrázek --- */
+.info-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.info-block:hover .info-image img {
+    transform: scale(1.1);
+}
+
+
+/* ========================================================== */
+/*                   TEXTOVÝ OBSAH BLOKŮ                      */
+/* ========================================================== */
+
+/* --- Nadpisy bloků --- */
+.info-block h2 {
+    color: goldenrod;
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 24px;
+    margin: 20px 0 15px 0;
+    padding: 0 20px;
+}
+
+/* --- Odstavce a odkazy --- */
+.info-block p {
+    font-family: "Modern No. 20", serif;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+    padding: 0 20px 20px 20px;
+}
+
+.info-block a {
+    color: goldenrod;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.info-block a:hover {
+    color: #b8860b;
+    text-decoration: underline;
+}
+
+
+/* ========================================================== */
+/*                      MAPA GOOGLE MAPS                      */
+/* ========================================================== */
+
+/* --- Kontejner mapy --- */
+.map-block {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    margin-top: 40px;
+}
+
+/* --- iframe s mapou --- */
+.map-block iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+}
+
+
+/* ========================================================== */
+/*                         RESPONSIVITA                       */
+/* ========================================================== */
+
+/* --- Tablety a mobilní zařízení (do 768px) --- */
+@media (max-width: 768px) {
+    #contact-info {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .info-block {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .map-block iframe {
+        height: 300px;
+    }
+}
