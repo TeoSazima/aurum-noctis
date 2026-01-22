@@ -34,7 +34,6 @@
 
 ## Live Demo
 
-📍 *(Optional — vlož URL, až bude dostupný)*
 
 ```
 https://lab.uzlabina.cz/~sazimma/projects/aurum-noctis/index/index.html
