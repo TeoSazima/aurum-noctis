@@ -37,7 +37,7 @@
 📍 *(Optional — vlož URL, až bude dostupný)*
 
 ```
-https://your-username.github.io/aurum-noctis/
+https://lab.uzlabina.cz/~sazimma/projects/aurum-noctis/index/index.html
 ```
 
 ---
